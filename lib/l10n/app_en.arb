@@ -1,0 +1,20 @@
+{
+  "addSomeTasks": "Add Some Tasks",
+  "toDoList": "To Do List",
+  "addNewTask": "Add New Task",
+  "selectTime": "Select Time",
+  "title": "Title",
+  "discribtion": "Discribtion",
+  "taskUpdate": "Task Update",
+  "editTask": "Edit Task",
+  "saveChanges": "Save Changes",
+  "delete": "Delete",
+  "edit": "Edit",
+  "settings": "Settings",
+  "language": "Language",
+  "english": "English",
+  "arabic": "Arabic",
+  "mode": "Mode",
+  "light": "Light",
+  "dark": "Dark"
+}

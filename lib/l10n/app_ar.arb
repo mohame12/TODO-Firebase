@@ -1,0 +1,20 @@
+{
+  "addSomeTasks": "اضف بعض المهام",
+  "toDoList": "قائمة المهام",
+  "addNewTask": "اضف مهمة جديدة",
+  "selectTime": "حدد الوقت",
+  "title": "العنوان",
+  "discribtion": "الوصف",
+  "taskUpdate": "حديث المهمة",
+  "editTask": "تعديل المهمة",
+  "saveChanges": "حفظ التغيرات",
+  "delete": "حذف",
+  "edit": "تعديل",
+  "settings": "الاعدادات",
+  "language": "اللغة",
+  "english": "أنجليزية",
+  "arabic": "عربية",
+  "mode": "الوضع",
+  "light": "مضيئ",
+  "dark": "مظلم"
+}
