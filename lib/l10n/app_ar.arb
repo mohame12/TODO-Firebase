@@ -5,7 +5,7 @@
   "selectTime": "حدد الوقت",
   "title": "العنوان",
   "discribtion": "الوصف",
-  "taskUpdate": "حديث المهمة",
+  "taskUpdate": "تحديث المهمة",
   "editTask": "تعديل المهمة",
   "saveChanges": "حفظ التغيرات",
   "delete": "حذف",
@@ -16,5 +16,7 @@
   "arabic": "عربية",
   "mode": "الوضع",
   "light": "مضيئ",
-  "dark": "مظلم"
+  "dark": "مظلم",
+  "noTasks": "لا يوجد مهام.\nمن فضلك اضف بعض المهام."
+
 }

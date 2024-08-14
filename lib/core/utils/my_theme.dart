@@ -12,6 +12,7 @@ class MyTheme
       cardTheme: const CardTheme(
           color: whiteColor
       ),
+
     textTheme:GoogleFonts.poppinsTextTheme(),
     appBarTheme: const AppBarTheme(
         scrolledUnderElevation: 0,
