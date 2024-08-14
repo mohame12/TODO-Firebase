@@ -16,5 +16,6 @@
   "arabic": "Arabic",
   "mode": "Mode",
   "light": "Light",
-  "dark": "Dark"
+  "dark": "Dark",
+  "noTasks": "No tasks available yet.\nPlease add a new task."
 }

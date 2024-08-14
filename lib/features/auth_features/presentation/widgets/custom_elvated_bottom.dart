@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 
 import '../../../../core/utils/my_color.dart';
-import '../../../../core/utils/my_style.dart';
 
 class CustomElevated extends StatelessWidget {
   const CustomElevated({
-    super.key, required this.text, required this.onPressed,
+    super.key, required this.onPressed, required this.child,
   });
-  final String text;
   final void Function()? onPressed;
+  final Widget? child;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -23,13 +22,7 @@ class CustomElevated extends StatelessWidget {
           ),
           onPressed: onPressed, child: Padding(
         padding: const EdgeInsetsDirectional.symmetric(horizontal: 20),
-        child: Row(
-          children: [
-            Text(text,style: MyStyle.textStyle14.copyWith(color: whiteColor),),
-            const Spacer(),
-            const Icon(Icons.arrow_forward,color: whiteColor,)
-          ],
-        ),
+        child: child,
       )),
     );
   }

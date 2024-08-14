@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../../../../core/utils/my_color.dart';
 import '../../../../core/utils/my_style.dart';
 
@@ -24,7 +23,7 @@ class SelectedContainer extends StatelessWidget {
           child: Row(
             children: [
               Text(contain,style: MyStyle.textStyle14.copyWith(fontWeight: FontWeight.normal,color: blueColor),),
-              Spacer(),
+              const Spacer(),
               Icon(Icons.keyboard_arrow_down,color: blueColor,)
             ],
           ),

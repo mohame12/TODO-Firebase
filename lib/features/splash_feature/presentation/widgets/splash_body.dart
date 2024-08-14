@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todo2/core/shared_pref/shared_pref.dart';
 import 'package:todo2/core/utils/my_assets.dart';
 import 'package:todo2/core/utils/my_color.dart';
 import 'package:todo2/core/utils/my_style.dart';
@@ -19,6 +20,7 @@ class _SplashBodyState extends State<SplashBody>with SingleTickerProviderStateMi
   late Animation<Offset>slideAnimation;
   @override
   void initState() {
+    UserDataFromStorage.getData();
     super.initState();
     animationControl();
     timeOut();
@@ -26,7 +28,7 @@ class _SplashBodyState extends State<SplashBody>with SingleTickerProviderStateMi
 
   void animationControl() {
     animationController=AnimationController(vsync: this,duration: const Duration(milliseconds: 600));
-    slideAnimation=Tween<Offset>(end: Offset.zero,begin:Offset(2,0) ).animate(animationController);
+    slideAnimation=Tween<Offset>(end: Offset.zero,begin:const Offset(2,0) ).animate(animationController);
     animationController.forward();
   }
   @override
@@ -51,8 +53,13 @@ class _SplashBodyState extends State<SplashBody>with SingleTickerProviderStateMi
   }
 
   void timeOut() {
-    Future.delayed(Duration(seconds: 2),(){
-      Navigator.pushReplacementNamed(context, LoginScreen.id);
+    Future.delayed(const Duration(seconds: 2),()async{
+      if(UserDataFromStorage.userIsLogin==true)
+        {
+          Navigator.pushReplacementNamed(context, HomeScreen.id);
+        }else {
+        Navigator.pushReplacementNamed(context, LoginScreen.id);
+      }
     });
   }
 }
