@@ -1,9 +1,12 @@
 import 'package:bloc/bloc.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:meta/meta.dart';
 import 'package:todo2/core/shared_pref/shared_pref.dart';
 import 'package:todo2/core/utils/my_color.dart';
+import 'package:todo2/features/auth_features/presentation/views/login.dart';
 
 import '../../../../../core/utils/my_style.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -25,7 +28,7 @@ class SettingsCubit extends Cubit<SettingsState> {
 
   lastLanguage()
   {
-    isAr=UserDataFromStorage.Language;
+    isAr=UserDataFromStorage.language;
     emit(SettingsLanguage(isAr: isAr));
   }
 
@@ -149,6 +152,22 @@ class SettingsCubit extends Cubit<SettingsState> {
               ],),
           ),
         ),);
+  }
+
+
+
+
+  logoutUser({required BuildContext context})
+  {
+    emit(SettingsLoading());
+    FirebaseAuth.instance.signOut().then((val){
+      UserDataFromStorage.setUserIsLogin(false);
+      emit(SettingsSuccess());
+      Navigator.pushNamedAndRemoveUntil(context,LoginScreen.id, (route) => false,);
+    }).catchError((e){
+      print(e.toString());
+      emit(SettingsFailuer(e: e));
+    });
   }
 
 }

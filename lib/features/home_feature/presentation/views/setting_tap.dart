@@ -63,6 +63,18 @@ class SettingTap extends StatelessWidget {
                 child: SelectedContainer(
                   contain: AppLocalizations.of(context)!.light,
                 ),
+              ),
+              const SizedBox(height: 40,),
+              Padding(
+                padding: const EdgeInsetsDirectional.only(top: 17,start: 40,end: 40),
+                child: SizedBox(width: double.infinity,
+                  height: MediaQuery.of(context).size.height*0.06,
+                  child: ElevatedButton(
+                      style:ElevatedButton.styleFrom(backgroundColor: blueColor,shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6))),
+                      onPressed: (){
+                        cubit.logoutUser(context: context);
+                      }, child: Text("L O G O U T",style: MyStyle.textStyle20.copyWith(color: whiteColor,fontWeight: FontWeight.bold),)),
+                ),
               )
             ],
           ),
