@@ -16,7 +16,7 @@ class UserDataFromStorage {
   static late String userCity;
   static late String userId;
   static late bool userIsLogin;
-  static late bool Language;
+  static late bool language;
   static late bool userIsCompany;
   static late bool themeIsDarkMode;
   static late bool onBoardingIsOpen;
@@ -193,7 +193,7 @@ class UserDataFromStorage {
     _setData();
   }
   static setLanguage(bool block) {
-    Language = block;
+    language = block;
     _setData();
   }
   static setThemeIsDarkMode(bool darkMode) {
@@ -234,7 +234,7 @@ class UserDataFromStorage {
 
     final prefs= await SharedPreferences.getInstance();
     prefs.setBool("userIsLogin",userIsLogin);
-    prefs.setBool("Language",Language);
+    prefs.setBool("Language",language);
     prefs.setBool("userIsCompany",userIsCompany);
 
     prefs.setString('userName',userName);
@@ -281,9 +281,9 @@ class UserDataFromStorage {
 
     final prefs = await SharedPreferences.getInstance();
     userIsLogin = prefs.getBool("userIsLogin")?? false;
-    Language = prefs.getBool("Language")?? false;
+    language = prefs.getBool("Language")?? false;
     userIsCompany = prefs.getBool("userIsCompany")?? true;
-    themeIsDarkMode = prefs.getBool("themeIsDarkMode")?? false;
+    themeIsDarkMode = prefs.getBool("themeIsDarkMode")?? true;
     onBoardingIsOpen = prefs.getBool("onBoardingIsOpen")?? false;
     languageCodeFromStorage = prefs.getString("languageCodeFromStorage")??'en';
     languageNameFromStorage = prefs.getString("languageNameFromStorage")??'langEnglish';

@@ -32,7 +32,7 @@ class ModalBottomSheet extends StatelessWidget {
                 children: [
                   Text(
                     AppLocalizations.of(context)!.addNewTask,
-                    style: MyStyle.textStyle18,
+                    style: MyStyle.textStyle18.copyWith(color: greyColor),
                   ),
                   const SizedBox(
                     height: 28,

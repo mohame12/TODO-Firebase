@@ -49,10 +49,10 @@ class MyCard extends StatelessWidget {
                         const SizedBox(height: 12),
                         Row(
                           children: [
-                            SvgPicture.asset('assets/images/Discovery.svg'),
+                            SvgPicture.asset('assets/images/Discovery.svg',color: Colors.grey,),
                             const SizedBox(width: 3,),
                             Text(
-                              DateTime.fromMillisecondsSinceEpoch(taskModel.date).toString().substring(0,10), style: MyStyle.textStyle12,)
+                              DateTime.fromMillisecondsSinceEpoch(taskModel.date).toString().substring(0,10), style: MyStyle.textStyle12.copyWith(color: greyColor),)
                           ],
                         )
                       ],

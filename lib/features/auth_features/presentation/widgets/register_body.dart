@@ -9,6 +9,8 @@ import '../../../../core/utils/validation_functions.dart';
 import '../../../../core/widgets/alart_dilog.dart';
 import '../../../../core/widgets/custom_tff.dart';
 import 'custom_elvated_bottom.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 
 class RegisterBody extends StatelessWidget {
   const RegisterBody({
@@ -22,8 +24,8 @@ class RegisterBody extends StatelessWidget {
         listener: (BuildContext context, RegisterState state) {
           if (state is RegisterSuccess) {
             ScaffoldMessenger.of(context).showSnackBar(
-              const SnackBar(
-                content: Text('Registration successful!'),
+               SnackBar(
+                content: Text(AppLocalizations.of(context)!.signupSussecc),
                 backgroundColor: Colors.green,
                 duration: Duration(seconds: 2),
               ),
@@ -48,8 +50,8 @@ class RegisterBody extends StatelessWidget {
                     const SizedBox(
                       height: 40,
                     ),
-                    const Text(
-                      'Create Account!',
+                     Text(
+                      AppLocalizations.of(context)!.createNewAccount,
                       style: MyStyle.textStyle24,
                     ),
                     const SizedBox(
@@ -65,7 +67,7 @@ class RegisterBody extends StatelessWidget {
                       textEditingController: register.nameController,
                       obSecureText: false,
                       borderColor: blackColor,
-                      label: 'FristName',
+                      label: AppLocalizations.of(context)!.fristName,
                     ),
                     const SizedBox(
                       height: 40,
@@ -75,7 +77,7 @@ class RegisterBody extends StatelessWidget {
                       textEditingController: register.emailController,
                       obSecureText: false,
                       borderColor: blackColor,
-                      label: 'E-Mail',
+                      label: AppLocalizations.of(context)!.email,
                       keyboardType: TextInputType.emailAddress,
                     ),
                     const SizedBox(
@@ -86,7 +88,7 @@ class RegisterBody extends StatelessWidget {
                         textEditingController: register.phoneController,
                         obSecureText: false,
                         borderColor: blackColor,
-                        label: 'Phone',
+                        label: AppLocalizations.of(context)!.phone,
                         keyboardType: TextInputType.phone),
                     const SizedBox(
                       height: 40,
@@ -96,7 +98,7 @@ class RegisterBody extends StatelessWidget {
                         textEditingController: register.passwordController,
                         obSecureText: true,
                         borderColor: blackColor,
-                        label: 'Password',
+                        label: AppLocalizations.of(context)!.password,
                         keyboardType: TextInputType.emailAddress),
                     const SizedBox(
                       height: 40,
@@ -107,7 +109,7 @@ class RegisterBody extends StatelessWidget {
                         textEditingController: register.repasswordController,
                         obSecureText: true,
                         borderColor: blackColor,
-                        label: 'REPassword',
+                        label: AppLocalizations.of(context)!.rePassword,
                         keyboardType: TextInputType.emailAddress),
                     const SizedBox(
                       height: 40,
@@ -117,7 +119,7 @@ class RegisterBody extends StatelessWidget {
                        register.onPressed();
                       }, child:state is RegisterLoading?Center(child:  JumpingDotsProgressIndicator(color: Colors.white,fontSize: 15,)): Row(
                       children: [
-                        Text('R E G I S T E R',style: MyStyle.textStyle14.copyWith(color: whiteColor),),
+                        Text(AppLocalizations.of(context)!.signIn,style: MyStyle.textStyle14.copyWith(color: whiteColor),),
                         const Spacer(),
                         const Icon(Icons.arrow_forward,color: whiteColor,)
                       ],
@@ -131,7 +133,7 @@ class RegisterBody extends StatelessWidget {
                           Navigator.pushReplacementNamed(
                               context, LoginScreen.id);
                         },
-                        child: const Text('Did You Have An Account !')),
+                        child:  Text(AppLocalizations.of(context)!.didYouHaveAccount)),
                   ],
                 ),
               ),

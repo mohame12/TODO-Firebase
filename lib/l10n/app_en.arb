@@ -17,5 +17,18 @@
   "mode": "Mode",
   "light": "Light",
   "dark": "Dark",
-  "noTasks": "No tasks available yet.\nPlease add a new task."
+  "noTasks": "No tasks available yet.\nPlease add a new task.",
+  "loginTitle": "L O G I N",
+  "welcomeBack": "Welcome back!",
+  "email": "Email",
+  "password": "Password",
+  "forgetPassword": "Forgot Password",
+  "createNewAccount": "Or Create New Account",
+  "signIn": "SignIn",
+  "fristName": "FristName",
+  "phone": "Phone",
+  "rePassword": "RePassword",
+  "didYouHaveAccount": "Did You Have An Account !",
+  "loginSussecc": "Login Successful!",
+  "signupSussecc": "Signup Successful!"
 }
