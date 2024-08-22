@@ -1,4 +1,7 @@
 # todoFirebase
+Create ToDo App by Using FireBase(FireStore-FireAuth)
+making simple Registration and Login by using email and password and verifing email for login 
+and using cubit as State Mangment
 
 ![WhatsApp Image 2024-08-22 at 8 54 46 PM](https://github.com/user-attachments/assets/7159d915-2408-4f44-8d43-88f79eeafd85)
 ![WhatsApp Image 2024-08-22 at 8 54 46 PM](https://github.com/user-attachments/assets/022d8764-3d16-44fd-a2e3-647a299d157c)
